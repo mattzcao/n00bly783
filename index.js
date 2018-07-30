@@ -40,6 +40,11 @@ bot.on('message', async message => {
     let arg = messageArray.slice(1);
     let sender = message.author;
 
+    if (cmd.includes("@") || arg.includes("@")) {
+        if (message.author.id === "350816515727032321") {
+            message.channel.send("No Pinging!");
+        }
+    }
     
     if (!message.content.startsWith(prefix)) return;
     let commandFile = bot.commands.get(cmd.slice(prefix.length));
@@ -111,7 +116,7 @@ bot.on('message', async message => {
         let memeUser = `${message.author.username} ${message.author.id}`;
         console.log(memeUser);
     }
-    else if(cmd.startsWiths == "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z" && message.author.id == "350816515727032321") {
-        message.channel.send("oof");
+    else if(cmd === `${prefix}pingme`) {
+        message.channel.send(`<@${message.author.id}>`);
     }
 });
