@@ -1,5 +1,5 @@
 # n00bly783
-A friendly Discord moderation bot.
+A friendly Discord server moderating bot.
 
 ### How to use?
 Default prefix is `/`- use `/help` to get all the info you need!
