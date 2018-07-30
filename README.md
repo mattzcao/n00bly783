@@ -8,3 +8,5 @@ A friendly Discord moderation bot.
 * Integrated terminal/terminal linked to IDE to start up bot
 
 > alexa play despacito
+> no
+> bad alexa
