@@ -1,17 +1,15 @@
+
 const botConfig = require("./storage/botConfig.json");
-const prefix = botConfig.prefix;
+const prefix = botConfig.prefix;    
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const database = require("./storage/database.json");
 const fs = require('fs');
-const YouTube = require("discord-youtube-api");
-const youtube = new YouTube("AIzaSyA1S8mhfh12jut8_goPrRaWxN-SzBQQfxg");
 
-let warnings = JSON.parse(fs.readFileSync("./storage/warnings.json"));
 function randomEpisode() {
     seasonNumer = Math.floor(Math.random()*11);
     episodeNumber = Math.floor(Math.random()*15);
-}
+} 
 
 bot.commands = new Discord.Collection();
 fs.readdir("./storage/commands/", (err, files) => {
@@ -28,32 +26,32 @@ fs.readdir("./storage/commands/", (err, files) => {
 
 bot.login(botConfig.token);
 bot.on("ready", async () => {
-    let seasonNumber = Math.floor(Math.random()*11);
+    let seasonNumer = Math.floor(Math.random()*11);
     let episodeNumber = Math.floor(Math.random()*15);
 
     console.log(`${bot.user.username} is Online!\n`);
-    bot.user.setActivity(`${botConfig.prefix}help | Spongebob S${seasonNumber}E${episodeNumber}`, {type: "LISTENING"});
+    bot.user.setActivity(`${botConfig.prefix}help | Spongebob S${seasonNumer}E${episodeNumber}`, {type: "LISTENING"});
     randomEpisode();
 });
 bot.on('message', async message => {
-
+    
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let arg = messageArray.slice(1);
     let sender = message.author;
 
-
+    
     if (!message.content.startsWith(prefix)) return;
     let commandFile = bot.commands.get(cmd.slice(prefix.length));
     if(commandFile) commandFile.run(bot, message, arg)
 
     if(cmd === `${prefix}status`) message.reply('Fully Operational');
     else if(cmd === `${prefix}ping`) {
-        const then = Date.now();
+        const then = Date.now(); 
         message.channel.send('Pinging...').then(message => {
             message.edit(`:ping_pong: Pong! It took ${Date.now() - then}ms to send that message`);
         });
-    }
+    } 
     else if(cmd === `${prefix}coinflip` || cmd === `${prefix}cf`) {
         let coin = database.coinSides[Math.floor(Math.random()*2)];
         message.channel.send({embed: {
@@ -61,7 +59,7 @@ bot.on('message', async message => {
             description: coin,
             image: {url: coin}
         }});
-    }
+    } 
     else if(cmd === `${prefix}rat`) {
         message.channel.send("Don't become a rat or Logan Paul is going to taser you");
     }
@@ -72,7 +70,7 @@ bot.on('message', async message => {
             description: shrek,
             image: {url: shrek}
         }});
-    }
+    } 
     else if(cmd === `${prefix}fortnite`) {
         message.channel.send(':rotating_light: :rotating_light: ALERT! ALERT! PLEASE PAY ATTENTION! :rotating_light: :rotating_light: LOOKS LIKE SOMEONE PLAYS FORTNITE AHAHA :rotating_light: :rotating_light: ALERT! ALERT! PLEASE STOP TALKING ABOUT FORTNITE IN PUBLIC THANK YOU! GOODBYE! ')
     }
@@ -102,19 +100,18 @@ bot.on('message', async message => {
     else if(cmd === `${prefix}oof`) {
         message.delete(0);
         message.channel.send(
-        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +/
         ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +
-        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +
+        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" + 
+        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" + 
         ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n");
     }
-    else if(cmd === `${prefix}test`) {
-        if(message.guild.name !== "Bot testing") {
-            message.channel.send("Yay it works");
-        }
+    else if(cmd === `${prefix}supermeme`) {
+        let meemees = ["ligma balls", "boufa deez nuts"]
+        message.channel.send(meemees[Math.floor(Math.random()*2)]);
+        let memeUser = `${message.author.username} ${message.author.id}`;
+        console.log(memeUser);
     }
-    else if(cmd == `illegal`) {
-        message.channel.send("Illegal activity detected! Calling the illegality-cop right away! @Phoenix#6124");
+    else if(cmd.startsWiths == "a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z" && message.author.id == "350816515727032321") {
+        message.channel.send("oof");
     }
 });
-
-//Martin's Token: MzgxNjk4MjY1Mjc3NTMwMTEy.DPVsKA.loS7DnMHMBCuXzPrqwTdoo23p5o
