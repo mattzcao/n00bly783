@@ -5,7 +5,7 @@ A friendly Discord moderation bot.
 Default prefix is `/`. Do `/help` for a DM containing commands.
 
 ### Requirements for contributing:
-* Discord.js v11.3.2
-* Node.js 8.11.3
+* Discord.js v11.3.x
+* Node.js 8.0.0 or above
 * File-System (Javascript package)
 * Integrated terminal/terminal linked to IDE to start up bot
