@@ -1,4 +1,3 @@
-
 const botConfig = require("./storage/botConfig.json");
 const prefix = botConfig.prefix;
 const Discord = require('discord.js');
@@ -7,7 +6,6 @@ const database = require("./storage/database.json");
 const fs = require('fs');
 const YouTube = require("discord-youtube-api");
 const youtube = new YouTube("AIzaSyA1S8mhfh12jut8_goPrRaWxN-SzBQQfxg");
-
 
 let warnings = JSON.parse(fs.readFileSync("./storage/warnings.json"));
 function randomEpisode() {
@@ -44,7 +42,7 @@ bot.on('message', async message => {
     let arg = messageArray.slice(1);
     let sender = message.author;
 
-    
+
     if (!message.content.startsWith(prefix)) return;
     let commandFile = bot.commands.get(cmd.slice(prefix.length));
     if(commandFile) commandFile.run(bot, message, arg)
@@ -104,14 +102,18 @@ bot.on('message', async message => {
     else if(cmd === `${prefix}oof`) {
         message.delete(0);
         message.channel.send(
-        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +
+        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +/
         ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +
         ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +
         ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n");
-    } else if(cmd === `${prefix}test`) {
+    }
+    else if(cmd === `${prefix}test`) {
         if(message.guild.name !== "Bot testing") {
             message.channel.send("Yay it works");
         }
+    }
+    else if(cmd == `illegal`) {
+        message.channel.send("Illegal activity detected! Calling the illegality-cop right away! @Phoenix#6124");
     }
 });
 
