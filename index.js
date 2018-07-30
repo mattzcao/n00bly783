@@ -1,6 +1,6 @@
 
 const botConfig = require("./storage/botConfig.json");
-const prefix = botConfig.prefix;    
+const prefix = botConfig.prefix;
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const database = require("./storage/database.json");
@@ -13,7 +13,7 @@ let warnings = JSON.parse(fs.readFileSync("./storage/warnings.json"));
 function randomEpisode() {
     seasonNumer = Math.floor(Math.random()*11);
     episodeNumber = Math.floor(Math.random()*15);
-} 
+}
 
 bot.commands = new Discord.Collection();
 fs.readdir("./storage/commands/", (err, files) => {
@@ -30,15 +30,15 @@ fs.readdir("./storage/commands/", (err, files) => {
 
 bot.login(botConfig.token);
 bot.on("ready", async () => {
-    let seasonNumer = Math.floor(Math.random()*11);
+    let seasonNumber = Math.floor(Math.random()*11);
     let episodeNumber = Math.floor(Math.random()*15);
 
     console.log(`${bot.user.username} is Online!\n`);
-    bot.user.setActivity(`${botConfig.prefix}help | Spongebob S${seasonNumer}E${episodeNumber}`, {type: "LISTENING"});
+    bot.user.setActivity(`${botConfig.prefix}help | Spongebob S${seasonNumber}E${episodeNumber}`, {type: "LISTENING"});
     randomEpisode();
 });
 bot.on('message', async message => {
-    
+
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
     let arg = messageArray.slice(1);
@@ -51,11 +51,11 @@ bot.on('message', async message => {
 
     if(cmd === `${prefix}status`) message.reply('Fully Operational');
     else if(cmd === `${prefix}ping`) {
-        const then = Date.now(); 
+        const then = Date.now();
         message.channel.send('Pinging...').then(message => {
             message.edit(`:ping_pong: Pong! It took ${Date.now() - then}ms to send that message`);
         });
-    } 
+    }
     else if(cmd === `${prefix}coinflip` || cmd === `${prefix}cf`) {
         let coin = database.coinSides[Math.floor(Math.random()*2)];
         message.channel.send({embed: {
@@ -63,7 +63,7 @@ bot.on('message', async message => {
             description: coin,
             image: {url: coin}
         }});
-    } 
+    }
     else if(cmd === `${prefix}rat`) {
         message.channel.send("Don't become a rat or Logan Paul is going to taser you");
     }
@@ -74,7 +74,7 @@ bot.on('message', async message => {
             description: shrek,
             image: {url: shrek}
         }});
-    } 
+    }
     else if(cmd === `${prefix}fortnite`) {
         message.channel.send(':rotating_light: :rotating_light: ALERT! ALERT! PLEASE PAY ATTENTION! :rotating_light: :rotating_light: LOOKS LIKE SOMEONE PLAYS FORTNITE AHAHA :rotating_light: :rotating_light: ALERT! ALERT! PLEASE STOP TALKING ABOUT FORTNITE IN PUBLIC THANK YOU! GOODBYE! ')
     }
@@ -105,8 +105,8 @@ bot.on('message', async message => {
         message.delete(0);
         message.channel.send(
         ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +
-        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" + 
-        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" + 
+        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +
+        ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n" +
         ":egg::egg::egg::egg::egg::egg::egg::egg::egg::egg:\n");
     } else if(cmd === `${prefix}test`) {
         if(message.guild.name !== "Bot testing") {
