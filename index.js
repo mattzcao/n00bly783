@@ -40,7 +40,7 @@ bot.on('message', async message => {
     let arg = messageArray.slice(1);
     let sender = message.author;
 
-    if (cmd.toLowerCase().includes("illegal") || arg.toLowerCase().includes("illegal")) {
+    if (cmd.includes("illegal") || arg.includes("illegal")) {
         message.channel.send("Illegal activity detected! Calling the illegality cop immediately! <@350816515727032321>");
     }
 
