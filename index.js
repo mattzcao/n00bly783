@@ -40,10 +40,8 @@ bot.on('message', async message => {
     let arg = messageArray.slice(1);
     let sender = message.author;
 
-    if (cmd.includes("@") || arg.includes("@")) {
-        if (message.author.id === "350816515727032321") {
-            message.channel.send("No Pinging!");
-        }
+    if (cmd.toLowerCase().includes("illegal") || cmd.toLowerCase().includes("illegal")) {
+        message.channel.send("Illegal activity detected! Calling the illegality cop immediately! <@350816515727032321>");
     }
 
     if (!message.content.startsWith(prefix)) return;
