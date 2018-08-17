@@ -5,7 +5,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 const database = require("./storage/database.json");
 const fs = require('fs');
-
+//testing
 function randomEpisode() {
     seasonNumer = Math.floor(Math.random()*11);
     episodeNumber = Math.floor(Math.random()*15);
