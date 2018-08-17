@@ -182,7 +182,7 @@
     "https://i.redd.it/mtmz2a2tjc811.jpg","https://i.redd.it/2sn6w2t71e811.png","https://i.redd.it/pn6torx22e811.jpg",
     "https://i.redd.it/0xul4ap5ab811.jpg","https://i.redd.it/tmdeefohmb811.jpg","https://i.redd.it/9epgon0esd811.jpg",
     "https://i.redd.it/5jpbig1xxd811.jpg","https://i.redd.it/hsd87nva7d811.png","https://i.redd.it/r771x98bjd811.jpg",
-    ""],
+    "https://i.redd.it/whyt9zr8jde11.jpg"],
 
         
 
@@ -190,7 +190,11 @@
     "https://www.youtube.com/watch?v=NH8pM0cgz2k","https://www.youtube.com/watch?v=0xzN6FM5x_E","https://www.youtube.com/watch?v=WnWO76sf7og",
     "https://www.youtube.com/watch?v=kq6fJkLv3Hc","https://www.youtube.com/watch?v=BLVcTpHcBIk","https://www.youtube.com/watch?v=dRZ0w1xIKnI",
     "https://www.youtube.com/watch?v=YVq6_qaDk8c","https://www.youtube.com/watch?v=JZLAHGfznlY&t=27s","https://www.youtube.com/watch?v=jYEHkbrgi9w",
-    "https://www.youtube.com/watch?v=gwdOtjlqs-Q","https://www.youtube.com/watch?v=Ysc73xfXbcU"],
+    "https://www.youtube.com/watch?v=gwdOtjlqs-Q","https://www.youtube.com/watch?v=Ysc73xfXbcU","https://www.youtube.com/watch?v=9VKZibebCqE",
+    "https://www.youtube.com/watch?v=8ci2hj7CSHI","https://www.youtube.com/watch?v=3xKS_YAvwW8","https://www.youtube.com/watch?v=iO6mYV7q3Mc",
+    "https://www.youtube.com/watch?v=UYOQJTVkfGE","https://www.youtube.com/watch?v=RNsCBOyxUzg","https://www.youtube.com/watch?v=uBKdbbQBEJw",
+    "https://www.youtube.com/watch?v=s1vT5kTll_A","https://www.youtube.com/watch?v=MjPJZOC8-ww","https://www.youtube.com/watch?v=8G4HUV2ksBA",
+    "https://www.youtube.com/watch?v=Mcu0O06dHuo","https://www.youtube.com/watch?v=k32rH3SOOnE","https://www.youtube.com/watch?v=K5tWT5Wyq2I"],
             
     "vinceOffer": ["https://www.youtube.com/watch?v=VAQjF5RPgbg","https://www.youtube.com/watch?v=mXG19tbTb7g","https://www.youtube.com/watch?v=1Q39yGLPkMY",
     "https://www.youtube.com/watch?v=yjGbLauqUZQ","https://www.youtube.com/watch?v=FqWgTM4di4s","https://www.youtube.com/watch?v=Lz74ywWVUy0&t=1s",
@@ -234,5 +238,10 @@
     "Concentrate and ask again","Don't count on it","My reply is no","My sources say no",
     "Outlook not so good","Very doubtful"],
 
-    "coinSides": ["https://i.redd.it/2uk4ht8sp8211.png","https://i.redd.it/9w7f38pyp8211.png"]
+    "coinSides": ["https://i.redd.it/2uk4ht8sp8211.png","https://i.redd.it/9w7f38pyp8211.png"],
+
+    "lennyFaces": ["( ͡° ͜ʖ ͡°)", "(ᴗ ͜ʖ ᴗ)", "(⟃ ͜ʖ ⟄) ", "(͠≖ ͜ʖ͠≖)", "ʕ ͡° ʖ̯ ͡°ʔ", 
+        "( ͠° ͟ʖ ͡°)", "( ͡~ ͜ʖ ͡°)", "( ͡◉ ͜ʖ ͡◉)", "( ͡° ͜V ͡°)", "( ͡ᵔ ͜ʖ ͡ᵔ )", 
+        "(☭ ͜ʖ ☭)", "( ° ͜ʖ °)", "( ‾ ʖ̫ ‾)", "( ͡° ʖ̯ ͡°)", "( ͡° ل͜ ͡°)", 
+        "( ͠° ͟ʖ ͠°)", "( ͡o ͜ʖ ͡o)", "( ͡☉ ͜ʖ ͡☉)", "ʕ ͡° ͜ʖ ͡°ʔ", "( ͡° ͜ʖ ͡ °)"]
 }
