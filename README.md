@@ -2,7 +2,7 @@
 A friendly Discord server moderating bot.
 
 ### How to use?
-Default prefix is `/`- use `/help` to get all the info you need!
+Default prefix is `n/`- use `n/help` to get all the info you need!
 
 ### Requirements for contribution:
 * Discord.js v11.3.x https://www.npmjs.com/package/discord.js
